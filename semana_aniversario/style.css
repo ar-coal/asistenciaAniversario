@@ -1,0 +1,383 @@
+/* *{
+    border: 1px solid red;
+} */
+/*PAGINA PRINCIPAL*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #a0a0a0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #1b396a;
+    animation: gradient 15s ease infinite;
+    border-radius: 5px;
+}
+
+.nav {
+    position: sticky;
+    background-color: #1b396a;
+    color: whitesmoke;
+    width: 100%;
+    height: 15%;
+}
+
+.nav img {
+    height: 50px;
+    position: relative;
+    top: 5px;
+}
+
+.nav .main-page {
+    position: relative;
+    top: -1%;
+    overflow: auto;
+    font-size: 36px;
+    margin-left: 2%;
+    text-decoration: none !important;
+    color: white
+}
+
+.nav button {
+    border: 1px solid #1b396a;
+    font-weight: bold;
+    color: #1b396a;
+    background-color: whitesmoke;
+    border-radius: 16px;
+    height: 30px;
+    width: 110px;
+    position: relative;
+    top: -7px;
+    margin-left: 12%;
+
+}
+
+.titulo h1 {
+    font-size: 46px;
+    margin-left: 25px;
+    font-weight: lighter;
+}
+
+.cursos {
+    display: grid;
+    row-gap: 50px;
+    column-gap: 100px;
+    margin: 0 2%;
+    margin-bottom: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 330px));
+}
+
+.cursos .curso {
+    width: 100%;
+    height: 100%;
+    /* border: 1px groove darkgray; */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 7px 7px 10px 5px #909090;
+    position: relative;
+}
+
+.cursos .curso .image {
+    margin-bottom: 5px;
+}
+
+.cursos .curso .image img {
+    border-radius: 10px;
+}
+
+
+.cursos .curso .titulo {
+    font-size: x-large;
+    color: #1b396a;
+    font-weight: bold;
+}
+
+.cursos .curso .conferencistas {
+    font-size: large;
+    color: #303030;
+    font-weight: bold;
+}
+
+.cursos .curso .texto {
+    font-size: medium;
+    color: #000000;
+}
+
+.cursos .curso .horario {
+    font-size: small;
+    color: #606060;
+    font-weight: bold;
+}
+
+.cursos .curso .lugar {
+    font-size: small;
+    color: #1b396a;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+
+.cursos .curso input {
+    position: absolute;
+    border-radius: 16px;
+    height: 30px;
+    width: 110px;
+    color: whitesmoke;
+    bottom: 10px;
+
+}
+
+.cursos .curso .asistencia {
+    left: 10px;
+    background-color: #1A2782;
+    border: 1px solid #1A2782;
+    color: white;
+}
+
+.cursos .curso .asistencia:hover {
+    cursor: pointer;
+}
+
+.cursos .curso .registrarse {
+    right: 10px;
+    border: 1px solid #1A2782;
+    background-color: #1A2782;
+}
+
+.cursos .curso .asistencia_in {
+    left: 10px;
+    color: #000000;
+    background-color: #606060;
+    border: 1px solid #606060;
+
+}
+
+.cursos .curso .registrarse_in {
+    right: 10px;
+    color: #000000;
+    border: 1px solid #606060;
+    background-color: #606060;
+}
+
+/*Tabla de alumnos*/
+.search {
+    margin: 1% 0;
+    margin-left: 3%;
+}
+
+.search select {
+    font-size: medium;
+    height: 25px;
+}
+
+.search input {
+    font-size: medium;
+    height: 20px;
+    width: 30%;
+}
+
+.body {
+    margin: auto;
+}
+
+.body table {
+    margin: auto;
+    width: 80%;
+}
+
+.body th {
+    background-color: #1b396a;
+    color: whitesmoke;
+}
+
+.body .table-button {
+    width: 100%;
+    background-color: #1a5d82;
+    color: whitesmoke;
+    border-radius: 8px;
+    border: 1px solid #1a5d82;
+    transition: all .2s ease-in-out;
+}
+
+.body .table-button:hover {
+    cursor: pointer;
+}
+
+.body .table-button:active {
+    transform: scale(1.1);
+    transition: .1s;
+}
+
+.body .table-button {
+    width: 100%;
+    background-color: #1a5d82;
+    color: whitesmoke;
+    border-radius: 8px;
+    border: 1px solid #1a5d82;
+}
+
+
+.body tr {
+    height: 40px;
+}
+
+.body tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.body .loading-bar {
+    border: 6px solid whitesmoke;
+    border-radius: 100%;
+    border-top-color: #1b396a;
+    border-bottom-color: #1b396a;
+    width: 50px;
+    height: 50px;
+    animation: loading 1.5s infinite linear;
+}
+
+/* Visualizacion de alumnos */
+
+.students-body {
+    display: flex;
+    margin: auto;
+    padding: 2%;
+    position: relative;
+    right: 1%;
+}
+
+
+.students-body .tabla-alumnos button {
+    background-color: #1b396a;
+    border: 1px solid #1b396a;
+    color: white;
+    border-radius: 8px;
+}
+
+.students-body .tabla-alumnos input,
+select {
+    background-color: whitesmoke;
+    border: 1px solid #606060;
+    color: #303030;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+.students-body .tabla-alumnos .student-search {
+    margin-bottom: 1%;
+}
+
+.students-body .tabla-alumnos .query {
+    margin-bottom: 1%;
+}
+
+.students-body .tabla-alumnos .query .descarga-excel {
+    margin-left: 13%;
+    background-color: #60a060;
+}
+
+.students-body .lista-alumnos th {
+    background-color: #1b396a;
+    color: whitesmoke;
+    width: 120px;
+    font-size: medium;
+    height: 30px;
+}
+
+.students-body .lista-alumnos td {
+    font-size: small;
+}
+
+.students-body .lista-alumnos tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+
+
+.students-body .alumno {
+    margin-left: 5%;
+    background-color: #fafafa;
+    border: 1px solid #606060;
+    border-radius: 8px;
+    padding: 2%;
+    width: 50%;
+    height: max-content;
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .nav .main-page {
+        position: relative;
+        top: -1%;
+        font-size: 13px;
+        margin-left: 0;
+    }
+
+    .nav img {
+        height: 25px;
+        top: 2px;
+    }
+
+    .nav button {
+        height: 25px;
+        width: 85px;
+        top: -2px;
+        margin: 7px 0;
+        margin-left: 75%;
+    }
+
+    .titulo h1 {
+        font-size: 28px;
+        margin-left: 10px;
+    }
+
+    .cursos {
+        display: block;
+    }
+
+    .cursos .curso {
+        width: 80%;
+        height: 40%;
+        margin: 30px 10%;
+        border: 1px groove darkgray;
+        border-radius: 10px;
+    }
+
+    .cursos .curso .image img {
+
+        width: 300px;
+    }
+
+    .search input {
+        width: 70%;
+    }
+
+    .body {
+        margin-top: 5%;
+        font-size: small;
+    }
+
+    .body table {
+        margin: auto;
+        width: auto;
+    }
+
+
+}
